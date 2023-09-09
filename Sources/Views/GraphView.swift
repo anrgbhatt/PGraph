@@ -37,7 +37,6 @@ public struct GraphView<NodeContent: View, Graph: DirectedGraph.Graph>: View {
         .offset(offset)
         .scaleEffect(scale)
         .contentShape(Rectangle())
-        .gesture(scroll)
         .scalable(initialScale: self.$scale, scaleRange: CGFloat(0.2)...5)
         .onAppear {
             self.viewModel.startLayout()
